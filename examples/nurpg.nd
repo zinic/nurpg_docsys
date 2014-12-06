@@ -1,0 +1,532 @@
+@title NuRPG Character Source Document
+@author John Hopper
+@date
+
+@section Building Aspects
+
+A character or object begins with an empty template. Aspects are then added to give the character features. These features often include game play mechanics such as attacks, in-game understanding of subjects, magic and hacking.
+
+Can't find what you're looking for in the generated aspects? Aspects are designed to be easy to create! Players and GMs alike are invited to craft their own aspects appropriate for their setting.
+
+
+@section Getting Started
+
+Aspects start with a cost of 0.
+
+Aspects may be made of one or more features listed below. Each feature has an associated aspect point cost or return. Therefore the total of all the feature costs and returns becomes the aspect point cost of acquiring the aspect.
+
+
+@section Aspect Features
+
+@feature Character Elements
+
+Character elements are simple descriptors that both add flavor to a character and act as important dependencies for more complex aspects. They grant no bonuses nor do they grant abilities. The majority of aspects will either revolve around a character element or provide a character element in addition to other features. Many character elements will act as basic requirements for more complext aspects.
+
+@mechanic Character Element (<>)
+@cost 1
+Character elements have an aspect point cost that starts at 1. Larger or more important character elements may cost up to but no greater than 10 aspect points by adding this feature in multiple.
+
+
+@feature Health Pool Modifiers
+
+This feature grants the character a certain amount of additional durability in the form of health points. Health points represent how much damage a character or object can take before being considered destroyed.
+
+@mechanic Health Pool Expansion
+@cost 1
+Health pool modifications have an aspect point cost equal to the number of health points granted. For example, an aspect may grant 5 HP in which case it will also cost 5AP.
+
+@mechanic Health Pool Contraction
+@cost 1
+Health pool modifications have an aspect point cost equal to the number of health points granted. For example, an aspect may grant -5 HP in which case it will also return 5AP.
+
+
+@feature Character Ability
+
+Grants an ability with a check named the same as the ability. Abilities are actions a player may perform during game play. Abilities may include difficulty ratings required for success to perform as well as other features that modify its effect and or aspect point cost.
+
+Other aspects may grant bonuses or negatives to the related ability check.
+
+@note Ability start with an aspect point cost of 1.
+
+
+@feature Character Ability Proficiency Modifiers
+
+As a character becomes more skilled in a certain ability, they may find it easier to perform later on. Especially with practice. To better represent this advancement, aspects may impart ability check bonuses or negatives.
+
+@mechanic Ability Proficiency
+@cost 1
+Ability proficiencies have an aspect point cost of 1.
+
+@mechanic Ability Negative
+@cost -1
+Ability negatives have an aspect point return of 1.
+
+
+@feature Dodge Proficiency Modifiers
+
+As a character becomes more agile, they may find that they are able to dodge attacks more quickly. To better represent this advancement, aspects may impart dodge check bonuses or negatives.
+
+@mechanic Dodge Proficiency
+@cost 2
+Dodge proficiencies of +1 have an aspect point cost of 2
+
+@mechanic Dodge Negative
+@cost -2
+Dodge negatives of -1 have an aspect point return of 2
+
+
+@feature Movement Proficiency Modifiers
+
+As a character becomes more mobile, they may find that they are able to move far faster. To better represent this advancement, aspects may impart movement proficiency bonuses or negatives. Each point in movement represents one additional map cell of movement per movement action. For example, a single movement proficiency gives the character 1 map cell per movement action. Movement proficiencies may stack to grant the character additional movement.
+
+@mechanic Movement Proficiency
+@cost 2
+Movement proficiencies of +1 have an aspect point cost of 2
+
+@mechanic Movement Negative
+@cost -2
+Movement negatives of -1 have an aspect point return of 2
+
+
+@feature Situational Proficiency
+
+Situational proficiencies extend the application range of certain actions and abilities. This is useful for describing additional situations in which an action or ability check may apply or to enhance an ability to overcome certain situational impediments and their associated check difficulty modifiers. This is a great way to describe a hacker's toolkit as a collection of items that grant situational proficiencies: a hacker's ICE may grant a situational proficiency against a certain type of cyber defence.
+
+@mechanic Situational Proficiency
+@cost 1
+Situational proficiencies have an aspect point cost of 1
+
+
+@feature Activation Restriction, Frequency
+
+Certain aspects may only be activated or used a number of times during a given time period. This effectively limits their use - making expenditure more strategic for the player. Any aspect that may be used more that once per hour has no aspect point return. If an aspect has a frequency even one second less than the time required must take the lower return. For example, an aspect that may be used every 23 hours 59 minutes 59 seconds still does not qualify for the 2 aspect point return.
+
+Many of the longer durations can be used to describe regrowth of certain body features such as a gecko's tail. A gecko's decoy tail aspect may be used two weeks after it is used to allow time for the tail to grow back. This would return 4 aspect points!
+
+@mechanic Activation Restriction *:Day
+@cost -1
+Aspects that may be activated more than once per day have an aspect point return of 1
+
+@mechanic Activation Restriction 1:Day
+@cost -2
+Aspects that may be activated once every day have an aspect point return of 2
+
+@mechanic Activation Restriction 1:Week
+@cost -3
+Aspects that may be activated once every week have an aspect point return of 3
+
+@mechanic Activation Restriction 2:Week
+@cost -4
+Aspects that may be activated once every 2 weeks have an aspect point return of 4
+
+@mechanic Activation Restriction 1:Month
+@cost -5
+Aspects that may be activated once every month have an aspect point return of 5
+
+@mechanic Activation Restriction >1:Month
+@cost -6
+Aspects that may be activated once every month have an aspect point return of 6
+
+
+@feature Natural Damage Resistance
+
+Natural damage resistance may be granted to a character by a number of things. This modifier costs 1 aspect point per point of damage resistance added to the character.
+
+@mechanic Natural Damage Resistance
+@cost 1
+1 Natural DR has an aspect point cost of 1.
+
+
+@feature Base Difficulty
+
+The base difficulty for an ability starts at 10. This has an aspect point cost of 1. This difficulty may be modified in increments of 5 for a cost or return of 1 aspect point per increment. A difficulty of 5 therefore will cost 1 additional aspect point where as a difficulty of 15 will return an additional aspect point.
+
+@mechanic 0 Base Difficulty
+@cost 3
+A base difficulty of 0 can only fail on a critical failure.
+
+@mechanic 5 Base Difficulty
+@cost 2
+Sets the difficulty to 5 for an aspect point cost of 1.
+
+@mechanic 10 Base Difficulty
+@cost 1
+Sets the difficulty to 10 for an aspect point cost of 0.
+
+@mechanic 15 Base Difficulty
+@cost 0
+Sets the difficulty to 15 for an aspect point return of 1.
+
+@mechanic 20 Base Difficulty
+@cost -1
+Sets the difficulty to 20 for an aspect point return of 2.
+
+@mechanic 25 Base Difficulty
+@cost -2
+Sets the difficulty to 25 for an aspect point return of 3.
+
+@mechanic 30 Base Difficulty
+@cost -3
+Sets the difficulty to 30 for an aspect point return of 4.
+
+@mechanic 35 Base Difficulty
+@cost -4
+Sets the difficulty to 35 for an aspect point return of 5.
+
+
+@feature Situational Difficulty Modifiers
+
+Certain difficulties in an ability may introduce themselves only when certain circumstances arise. Situational difficulties may modify an ability's difficulty by increments of 5. A situation that reduces the difficulty of an ability by 5 therefore will cost 1 additional aspect point where as a difficulty increase of 5 will return 1 additional aspect point.
+
+@mechanic Situational Difficulty -5
+@cost 1
+Decreases the difficulty of an ability by 5 for an aspect point cost of 1.
+
+@mechanic Situational Difficulty -10
+@cost 2
+Decreases the difficulty of an ability by 10 for an aspect point cost of 2.
+
+@mechanic Situational Difficulty +5
+@cost -1
+Increases the difficulty of an ability by 5 for an aspect point return of 1.
+
+@mechanic Situational Difficulty +10
+@cost -2
+Increases the difficulty of an ability by 10 for an aspect point return of 2.
+
+
+@feature Target Requirement
+
+Certain abilities can only target a certain character or character features. For example the ability Sense Motive can not be used on targets without the Ego aspect. You're likely to encounter a vast majority of characters who will have this aspect. We'll say 80% for example. This means that the requirement is worth only 1 aspect point in return.
+
+@mechanic Target Requirement <=25%
+@cost -4
+Requirements that will be satisfied 25% of the time or less are worth 4 aspect points
+
+@mechanic Target Requirement 25%:50%
+@cost -3
+Requirements that will be satisfied 25% to 50% of the time are worth 3 aspect points
+
+@mechanic Target Requirement 50%:75%
+@cost -2
+Requirements that will be satisfied 50% to 75% of the time are worth 2 aspect points
+
+@mechanic Target Requirement 75%:100%
+@cost -1
+Requirements that will be satisfied 75% to 100% of the time are worth 1 aspect point
+
+
+@section Effects
+
+@effect Heal
+@cost 2
+
+Grants a rapid healing effect to an ability. This effect, upon success of its associated ability, delivers 1d4 heal points back to the target of the ability.
+
+
+@effect Emotional Insight
+@cost 2
+
+Grants a character insight into the emotional state of a target. Upon success, the GM may divulge that the target is lying or grant the player insight into the target's current motives.
+
+
+@section Abilities
+
+@ability Fast Heal
+@difficulty 10
+Grants an instant healing effect to a target. Upon success, 1d4 health points are instantly returned to the target as bleeding wounds are staunched, patched and bandaged up. This action takes 1 minute to complete.
+
+@grants effect Heal
+@grants mechanic Activation Restriction 1:Day
+A target of a successful administration of fast heal may not receive further treatment from this ability until the next day.
+
+
+@ability Sense Motive
+@difficulty 10
+Grants a character insight into a target's motives. This requires the character to be in contact with the target through a means that allows for fast flowing, spoken communication. The difficulty of this check may be enhanced or decreased by many modifiers identified at GM discretion.
+
+@grants effect Emotional Insight
+@grants mechanic Target Requirement 75%:100%
+Any target of Sense Motive is required to have the Ego aspect. Without an Ego the target has no emotions.
+
+@grants mechanic Situational Difficulty +5
+Without face to face communication, the difficulty of the ability is increased by 5 to 15.
+
+
+@ability Strength
+@difficulty 10
+
+A character may use this ability for many things such as forcing open a door to opposing a foe during a heated arm wrestle.
+
+@grants mechanic Character Element (Strength)
+This element is required for a character to move and perform work. In example, industrial robots can not leave from their installed location since they lack mobility. However, they are still able to move and perform work. Robots such as this have only the strength ability.
+
+
+@ability Mobility
+@difficulty 10
+
+This ability is required for a character's balance and allows the entity the ability to move freely.
+
+@grants mechanic Character Element (Mobility)
+This element is required for a character to move on their own. In example, a car can be said to have this aspect since it can move under its own power.
+
+
+@ability Intelligence
+@difficulty 10
+
+This ability is required for a character to follow instruction and compute results. A character may use this ability for many things such as remembering past events, common sense or problem solving.
+
+
+@ability Will
+@difficulty 10
+
+A character may use this ability for many things such as resisting a mental attack, resisting personal impulses or standing up to frightful situations.
+
+@grants mechanic Character Element (Will)
+This element is required for a character to have a sense of self. There can be to "I" without this character element.
+
+
+@ability Perception (<>)
+@difficulty 10
+
+Grants a character the ability to use a particular perceptive sense light sight, smell touch and so on to senses that humans can't currently comprehend.
+
+@grants mechanic Character Element (<>)
+
+
+@ability Knowledge (<>)
+@difficulty 10
+
+Grants a character an understanding of a given array of interrelated subjects.
+
+
+@ability Analysis (<>)
+@difficulty 10
+
+Grants a character a deep understanding of a given array of interrelated subjects.
+
+
+@section Traits
+
+Organic - Trait
+
+-1 AP
+
+This entity is now considered an organic.
+
+1: Strength
+1: Intelligence
+-1: Weakness, Requirement <Food>
+-1: Weakness, Requirement <Water>
+-1: Weakness, Damage Type <Radiation>
+
+
+Human - Trait
+
+0 AP
+
+This entity is now considered a human.
+
+-1 :: Organic
+
+-6: Breathing <Oxygen>
+2: Mobility
+1: Vision
+1: Ego
+1: Taste
+1: Touch
+1: Scent
+
+
+@section Positive Aspects
+
+@aspect Durability
+
+This aspect is required for a character or object to maintain its form. Some amount of durability must be imparted to the the character or object for it to have a shape that resists change such as a body, a shell or due to the very properties of material itself.
+
+This aspect grants 2 HP.
+
+@grants mechanic Health Pool Expansion, 2
+
+
+@aspect Strength
+
+This aspect is required for a character to move and perform work. In example, industrial robots can not leave from their installed location since they lack mobility. However, they are still able to move and perform work. Robots such as this have only the strength aspect.
+
+@grants ability Strength
+
+
+@aspect Mobility
+
+This aspect is required for a character's balance and allows the entity the ability to move freely.
+
+@grants ability Mobility
+@grants mechanic Movement Proficiency, 1
+@requires aspect Strength
+
+
+@aspect Intelligence
+
+This aspect is required for a character to follow instruction and compute results. A character may use this ability for many things such as remembering past events, common sense or problem solving.
+
+@grants ability Intelligence
+@grants mechanic Character Element (Intelligence)
+This element is required for a character perform logical work. For example, a computer can be said to have the intelligence aspect since it can perform calculations. However, just having an intelligence does not mean the character is sentient and understands, "I am."
+
+
+@aspect Ego
+
+This aspect is required for a character to have a will or personality of its own. This aspect is also an important measure of how strong the character's personal discipline.
+
+@requires aspect Intelligence
+@grants ability Will
+
+A character may use this ability for many things such as resisting a mental attack, resisting personal impulses or standing up to frightful situations.
+
+
+@aspect Vision
+
+This aspect is required for a character to obtain some form of vision.
+
+@requires aspect Intelligence
+@grants ability Perception (Vision)
+
+Grants a character the ability to see. This ability check may be used to perform visual inspections of an array of things including one's surroundings, other characters or items.
+
+
+@aspect Taste
+
+This aspect is required for a character to obtain some form of taste. Even if a character has a tongue, without this aspect their tongue can taste nothing.
+
+@requires aspect Intelligence
+@grants ability Perception (Taste)
+
+Grants a character the ability to taste compounds. This ability check may be used to attempt to identify certain components of a compound being tasted or it may simply be used to enjoy a muffin.
+
+
+@aspect Scent
+
+This aspect is required for a character to obtain some form of smell. Even if a character has a nose, without this aspect their nose can smell nothing.
+
+@requires aspect Intelligence
+@grants ability Perception (Scent)
+
+Grants a character the ability to smell compounds. This ability check may be used to attempt to identify certain components of a compound being smelled or it may simply be used to enjoy the scent of a freshly baked muffin.
+
+
+@aspect Touch
+
+This aspect is required for a character to obtain some form of touch. Even if a character has fingers or toes, without this aspect their body can sense nothing related to touch.
+
+@requires aspect Intelligence
+@grants mechanic Character Element (Touch)
+
+Grants a character the sense of touch.
+
+
+@aspect Knowledge (<>)
+
+Grants a character an understanding of a given subjects. This aspect may be taken multiple times for different subject. When a knowledge is taken, the <> is replaced with the specific name of the knowledge aspect being learned.
+
+@requires aspect Ego
+@grants ability Knowledge (<>)
+
+Note, these may be campaign or setting specific - hence the generic nature of this aspect using the <> notation.
+
+
+@aspect Analysis (<>)
+
+Certain knowledge aspects open doors to deeper more intricate understanding of its subject matter. To go beyond just simple surface knowledge and advance toward becoming an expert, this aspect is required.
+
+@requires aspect Knowledge (<>)
+@grants ability Analysis (<>)
+
+This aspect may be taken multiple times for different subjects. When an analysis is taken, the <> is replaced with the specific name of the knowledge aspect being further studied. Note, these may be campaign or setting specific -
+hence the generic nature of this aspect using the <> notation.
+
+
+@ability Weapons - Long Range (<>)
+@difficulty 10
+Grants a characte the ability to use a given long range weapon type.
+
+
+@aspect Weapons - Long Range (<>)
+
+Over time a character who has practiced with a certain type of long-range weapon gains a proficiency in it. This gives the character to use the weapon with an ability check instead of the default weapon rules.
+
+@requires aspect Strength
+@requires aspect Intelligence
+
+@grants ability Weapons - Long Range (<>)
+
+Grants a character the use of a certain type of long range weapon.
+
+
+@aspect Empathy
+
+@requires aspect Ego
+@grants ability Sense Motive
+
+Grants a character empathy - the ability to see deeper than another character's words. Note that this must be used on targets that also have an ego!
+
+
+@aspect Athletics
+
+@requires aspect Mobility
+@grants mechanic Movement Proficiency
+
+Grants a character a more nimble form.
+
+
+@aspect Combat Acrobatics
+
+@requires aspect Athletics
+@grants mechanic Dodge Proficiency
+
+Grants a character a more nimble form.
+
+
+@aspect Combat Training
+
+@requires aspect Athletics
+@grants mechanic Movement Proficiency
+
+While in combat, this character's rush of adrenaline grants them an additional map cell of movement until combat ends or they die.
+
+
+@aspect First Aid
+
+@requires aspect Intelligence
+@grants ability Fast Heal
+
+First aid may be performed on a wounded character.
+
+
+@section Negative Aspects
+
+Weakness, Damage Type <> - Aspect
+
+-1 AP
+
+Requires: None
+
+Grants a character a weakness to a certain damage type. All damage received from this type is now increased by a total of 1.5 times its original value.
+
+
+Weakness, Requirement <> - Aspect
+
+-1 AP
+
+Requires: None
+
+Grants a character the need for a certain item whether this be a kind of medication, food or other kind of sustenance.
+
+
+Breathing <> - Aspect
+
+-5 AP
+
+Requires: Strength
+
+
+Grants a character the need to breathe a certain combination of gases.

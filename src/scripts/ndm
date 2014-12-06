@@ -1,0 +1,5 @@
+#!/bin/env python
+import nurpg.main as main
+
+
+main.run()

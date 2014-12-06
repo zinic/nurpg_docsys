@@ -1,0 +1,17 @@
+.python-version
+*.komodoproject
+*.log
+build/
+dist/
+.coverage
+*.pyc
+*.so
+.idea
+*.egg-info/
+*~
+*#
+.tox
+*.DS_Store*
+nosetests.xml
+*/coverage.xml
+.nds
