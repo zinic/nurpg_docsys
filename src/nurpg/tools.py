@@ -433,7 +433,13 @@ def export_tool(args):
 
     if args.format == 'html':
         with open('{}.html'.format(doc.title), 'w') as html_out:
-            html_stmt= html.div(render_doc(doc))
+            html_stmt= html.html(
+                html.head(
+                    html.title(doc.title)
+                ),
+
+                html.body(
+                    html.div(render_doc(doc))))
 
             html_out.write(html_stmt())
     else:
