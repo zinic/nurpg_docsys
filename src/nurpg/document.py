@@ -140,34 +140,6 @@ class DocumentNode(object):
         return str_content
 
 
-class Token(object):
-
-    def __init__(self, kind):
-        self.kind = kind
-
-
-class ContentToken(Token):
-
-    def __init__(self, content):
-        super(ContentToken, self).__init__(CONTENT_TOKEN)
-        self.content = content
-
-    def __str__(self):
-        return 'Content Token: {}'.format(self.content)
-
-
-class DirectiveToken(Token):
-
-    def __init__(self, directive, arguments=None):
-        super(DirectiveToken, self).__init__(DIRECTIVE_TOKEN)
-        self.directive = directive
-        self.arguments = arguments or ''
-
-    def __str__(self):
-        return 'Command Token: {}, Args: {}'.format(
-            self.directive, self.arguments)
-
-
 class Document(object):
 
     def __init__(self):
@@ -234,12 +206,47 @@ class DocumentBuilder(object):
             self.exit()
 
 
+class Token(object):
+
+    def __init__(self, kind):
+        self.kind = kind
+
+
+class ContentToken(Token):
+
+    def __init__(self, content):
+        super(ContentToken, self).__init__(CONTENT_TOKEN)
+        self.content = content
+
+    def __str__(self):
+        return 'Content Token: {}'.format(self.content)
+
+
+class DirectiveToken(Token):
+
+    def __init__(self, directive, arguments=None):
+        super(DirectiveToken, self).__init__(DIRECTIVE_TOKEN)
+        self.directive = directive
+        self.arguments = arguments or ''
+
+    def __str__(self):
+        return 'Command Token: {}, Args: {}'.format(
+            self.directive, self.arguments)
+
+
 def escape_str(source):
     return source.replace('\\', '\\\\').replace('|', '\\|')
 
 
 def edit(doc_filename):
     return DocumentContext(doc_filename)
+
+
+def write(document, doc_filename):
+    with open(doc_filename, 'w') as fout:
+        for node in document:
+            node_contents = str(node)
+            fout.write(str(node_contents))
 
 
 def read(doc_filename):
@@ -250,17 +257,6 @@ def read(doc_filename):
         raise DocumentError('File is too large to read. Maximum file  size'
                             ' supported is {} MB.'.format(MAX_DOC_SIZE_MB))
 
-    return _open(doc_filename)
-
-
-def write(document, doc_filename):
-    with open(doc_filename, 'w') as fout:
-        for node in document:
-            node_contents = str(node)
-            fout.write(str(node_contents))
-
-
-def _open(doc_filename):
     document = None
     doc_contents = _read_file(doc_filename)
 
@@ -300,6 +296,13 @@ def find(root, kind, content=None):
 
         # In the case where we run out of children we simply pass through
         # and iterate through the loop
+
+
+def _matches_spec(node, node_spec, case_insensitive):
+    content = node.content or ''
+    formatted = content if not case_insensitive else content.lower()
+
+    return fnmatch.fnmatchcase(formatted, node_spec)
 
 
 def _parse(content):

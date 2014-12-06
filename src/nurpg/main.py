@@ -2,13 +2,13 @@ import sys
 import logging
 import argparse
 
-import nurpg.tools as tools
 import nurpg.about as about
 import nurpg.error as error
 import nurpg.config as config
 import nurpg.output as output
 import nurpg.document as document
 
+import nurpg.tools.cli as tools
 
 # Logging!
 _LOG = logging.getLogger(__name__)
@@ -65,24 +65,6 @@ def build_argparser():
         help='Name of the export format.'
     )
 
-    # stash sub-directive
-    stash_parser = subparsers.add_parser(
-        'stash',
-        help='Stash operations.')
-
-    # stash sub-directives
-    stash_subparsers = stash_parser.add_subparsers(
-        dest='stash_tool_name',
-        title='Document Stash Commands',
-        help='Commands available.'
-    )
-
-    # stash_pop sub-directive
-    stash_subparsers = stash_subparsers.add_parser(
-        'pop',
-        help='Pops the most recently stashed file from the stash stack.')
-
-
     # find sub-directive
     find_parser = subparsers.add_parser(
         'find',
@@ -94,13 +76,8 @@ def build_argparser():
         help='The desired document node kind.'
     )
 
-    # new sub-directive
-    new_parser = subparsers.add_parser(
-        'add',
-        help='Adds new elements to the document interactively.')
-
-    # read sub-directive
-    read_parser= subparsers.add_parser(
+    # status sub-directive
+    status_parser= subparsers.add_parser(
         'status',
         help='Reads the document file and checks its vailidity.')
 
